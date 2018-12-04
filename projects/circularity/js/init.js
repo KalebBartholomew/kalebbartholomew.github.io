@@ -20,15 +20,21 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables //
-
+var circle;
+var circles = [];
 
         // TODO 2 : Create a function that draws a circle  //
-        var drawCircle;
+        var drawCircle = function() {
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            physikz.addRandomlyVelcoity(circle, canvas);
+            view.addChild(circle);
+            circles.push(circle);
+            
+        }
         
 
         // TODO 3 : Call the drawCircle function 5 times //
-
-
+        drawCircle(argument1);
         // TODO 7 : Create a Loop to call drawCircle 100 times
 
     
